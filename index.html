@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+			rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>QR Code Generator | M2X07</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>QRCode Generator</h1>
+			<input
+				type="text"
+				name="data"
+				id="data"
+				placeholder="Enter your text here" />
+			<div class="colorpicker">
+				<span id="cp-label">Change Colors:</span>
+				<span id="g1">
+					<input
+						type="color"
+						name="light"
+						id="colorLight"
+						value="#ffffff" />
+					<input
+						type="color"
+						name="dark"
+						id="colorDark"
+						value="#000000" />
+				</span>
+			</div>
+			<div class="canvasWrapper">
+				<canvas id="canvas"></canvas>
+			</div>
+			<button role="button" aria-label="Download QRCode PNG">
+				Download PNG
+			</button>
+			<div class="credits">
+				made by <a href="https://twitter.com/_m2x07">m2x07</a><br />
+				view on
+				<a href="http://github.com/m2x07/qrcode-generator">github</a>
+			</div>
+		</div>
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>

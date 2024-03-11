@@ -1,0 +1,21 @@
+{
+	"name": "qrcode-generator",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"devh": "vite --host",
+		"build": "vite build",
+		"preview": "vite preview",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist"
+	},
+	"devDependencies": {
+		"gh-pages": "^6.1.1",
+		"vite": "^5.1.6"
+	},
+	"dependencies": {
+		"qrcode": "^1.5.3"
+	}
+}
