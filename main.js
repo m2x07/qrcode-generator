@@ -3,6 +3,7 @@ const canvas = document.querySelector("#canvas");
 const input = document.querySelector("#data");
 const colorLight = document.querySelector("#colorLight");
 const colorDark = document.querySelector("#colorDark");
+const downloadButton = document.querySelector("#downloadButton");
 let data = "https://youtu.be/dQw4w9WgXcQ?si=Oa3-SPZpfGwT0573";
 
 let qrOpts = {
@@ -33,6 +34,12 @@ input.addEventListener("input", (e) => {
 		data = e.target.value;
 	}
 	QRCode.toCanvas(canvas, data, qrOpts);
+});
+
+downloadButton.addEventListener("click", () => {
+	let url = canvas.toDataURL("image/png");
+	downloadButton.href = url;
+	downloadButton.download = `qrcode-${data}.png`;
 });
 
 QRCode.toCanvas(canvas, data, qrOpts);
