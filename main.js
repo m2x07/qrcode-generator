@@ -6,6 +6,10 @@ const colorDark = document.querySelector("#colorDark");
 const downloadButton = document.querySelector("#downloadButton");
 let data = "https://youtu.be/dQw4w9WgXcQ?si=Oa3-SPZpfGwT0573";
 
+if (!input.value == "") {
+	data = input.value;
+}
+
 let qrOpts = {
 	errorCorrectionLevel: "Q",
 	margin: 2,
